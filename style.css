@@ -292,3 +292,8 @@ header{
         width: 100%;
     }
 }
+
+.head-homepage{
+    width: 100px;
+    background-color: #CAB3FF;
+}
