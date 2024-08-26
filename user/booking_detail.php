@@ -13,6 +13,7 @@
 <body>
     <div class="container">
         <h1>booking detail</h1>
+        <p>testttdcdefced</p>
     </div>
 </body>
 </html>
