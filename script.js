@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  alert('connected!')
+  // alert('connected!')
 
       // $(function(){
       //     // กำหนด element ที่จะแสดงปฏิทิน
