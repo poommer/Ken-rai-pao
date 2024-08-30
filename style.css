@@ -293,7 +293,75 @@ header{
     }
 }
 
+a{
+    text-decoration: none;
+}
 .head-homepage{
-    width: 100px;
+    width: 450px;
+    height: 65px;
     background-color: #CAB3FF;
+    display: flex;
+    flex-direction: row;
+    color: #722BC5;
+    padding: 1px;
+    gap: 5px;
+}
+
+.homepage-text{
+    display: flex;
+    flex-direction: column;
+}
+.homepage-logo{
+    margin-top: 1px;
+    margin-left: 5px;
+}
+.head-booking{
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-top: 20px;
+    gap: 5px;
+    font-size: 17px;
+    text-decoration: none;
+}
+.homepage-booking{
+    display: flex;
+    flex-direction:row;
+    margin-left: 1px;
+}
+.homepage-room{
+    width: 210px;
+    height: 220px;
+    border-radius: 20px;
+    margin-left: 10px;
+    background: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.plus{
+    margin-left: 180px;
+    cursor: pointer;
+}
+.head-room_detail{
+    display: flex;
+    gap: 20px;
+    color: #722BC5;
+}
+.btn-back{
+    width: 120px;
+    background-color: #E0D5FF;
+    display: flex;
+    align-items: center;
+    border-bottom-right-radius:25rem ;
+    box-shadow: 1px 1px 0 5px #CAB3FF;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;    
+    gap: 5px;
+}
+.title-room_detail{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
 }
