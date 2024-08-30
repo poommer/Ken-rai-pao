@@ -1,4 +1,20 @@
 $(document).ready(function () {
+<<<<<<< Updated upstream
+=======
+
+  $('#status_room').change(function (e) { 
+    e.preventDefault();
+    console.log(e.target.checked);
+    if(e.target.checked === true){
+      $('#statusArea').addClass('status-room-active');
+      $('#statusArea').removeClass('status-room');
+    }else{
+       $('#statusArea').removeClass('status-room-active');
+      $('#statusArea').addClass('status-room');
+    }
+    
+  });
+>>>>>>> Stashed changes
   // alert('connected!')
 
       // $(function(){
