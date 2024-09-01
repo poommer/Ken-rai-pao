@@ -62,40 +62,63 @@ unset($_SESSION['msg_success']);
             <hr>
 
             <div class="show-room">
+
+            <?php
+
+            $sql = 'SELECT * FROM room';
+            $result = $conn->query($sql);
+            $rows = $result->fetch_all(MYSQLI_ASSOC);
+            // print_r($rows);
+            foreach($rows as $row) {
+            ?>
+
                 <div class="card-room">
                     <div class="card-room-head"> 
                         
-                        <img src="../static/room/m/MA2105.jpg" alt="">
+                        <img src=<?php echo'../static/room/'.$row['room_type'].'/'.$row['room_id'].'.webp'; ?>  alt="" style="height: 10rem; object-fit: cover; ">
                         
                     </div>
 
                     <div class="card-body">
                         <div style="width:100%; display:flex; justify-content:end; align-items:center; ">
 
-                            <div class="status-room" id="statusArea">
-                                <label for="status_room">
+                            <div class=<?php echo $row['status'] == 1 ? 'status-room-active' : 'status-room' ?> id=<?php echo 'statusArea'.$row['room_id']; ?>>
+                                <label for=<?php echo$row['room_id']; ?>>
                                     <div id="btn_status"></div>
-                                    <input type="checkbox" id="status_room" name="status_room">
+                                    <input type="checkbox" id=<?php echo$row['room_id']; ?> name="status_room" <?php echo $row['status'] == 1 ? 'checked' : '' ?> onchange="status_show(this, '<?php echo$row['room_id']; ?>')">
                                 </label>
                             </div>
                         </div>
                             
                             <div class="title-room">
-                            <a href="#"><h2>meeting MA2105 room</h2></a>
+                            <a href="#"><h2><?php echo $row['room_name']; ?></h2></a>
                            
                         </div>
 
                         <div class="content-room">
-                            <p>การประชุมทีม การนำเสนอผลงาน หรือการประชุม
-                            ทางไกลที่ต้องการคุณภาพสูง</p>
+                            <p style="display:flex; align-items:center; gap:0.25rem;">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2854C5"><path d="M200-120q-17 0-28.5-11.5T160-160v-40q-50 0-85-35t-35-85v-200q0-50 35-85t85-35v-80q0-50 35-85t85-35h400q50 0 85 35t35 85v80q50 0 85 35t35 85v200q0 50-35 85t-85 35v40q0 17-11.5 28.5T760-120q-17 0-28.5-11.5T720-160v-40H240v40q0 17-11.5 28.5T200-120Zm-40-160h640q17 0 28.5-11.5T840-320v-200q0-17-11.5-28.5T800-560q-17 0-28.5 11.5T760-520v160H200v-160q0-17-11.5-28.5T160-560q-17 0-28.5 11.5T120-520v200q0 17 11.5 28.5T160-280Zm120-160h400v-80q0-27 11-49t29-39v-112q0-17-11.5-28.5T680-760H280q-17 0-28.5 11.5T240-720v112q18 17 29 39t11 49v80Zm200 0Zm0 160Zm0-80Z"/></svg>
+                            <?php echo $row['room_seats']; ?>
+                            
+                            <span style="display:flex; align-items:center; gap:0.25rem;">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2854C5"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/></svg>
+                                <?php echo $row['room_OpeningTime']; ?>
+                            </span>
+                        </p>
+                        <p>
+                                <?php echo $row['room_detail']; ?>
+                                
+                            </p>
                         </div>
 
                         <div class="footer-content">
                             <a href="#">edit</a>
-                            <a href="#">delete</a>
+                            <a href=<?php echo  '../server/admin/room/deleteRoom.php?id='.$row['room_id'] ?>>delete</a>
                         </div>
                     </div>
                 </div>
+      
+<?php } ?>
             </div>
 
         
@@ -105,8 +128,8 @@ unset($_SESSION['msg_success']);
       if(isset($_GET['stt'])) {
         if($_GET['stt'] == 'create'){
             require('modal/createRoom.php');
-        }else if( $_GET['stt'] == 'edit' || $_GET['stt'] == 'view'){
-            require('modal/edit_and_update.php');
+        }else if( $_GET['stt'] == 'edit'){
+            require('modal/editRoom.php');
 
         }
     }

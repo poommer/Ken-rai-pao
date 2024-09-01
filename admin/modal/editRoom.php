@@ -134,56 +134,7 @@
         </div>
   
                     </div>
-   
-        <!-- <label for="fac" style="font-size:20px;">สิงอำนวยความสะดวก</label>
-        <div class="row" style="display:flex; gap:1rem;" >
-        <div class="group-inp" style="width:50%;">
-            <label for="tc">
-                <input type="checkbox" name="fac[]" id="tc" value="โต๊ะ/เก้าอี้">
-                โต๊ะ/เก้าอี้
-            </label>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="เครื่องเสียง/ไมค์โครโฟน">
-                เครื่องเสียง/ไมค์โครโฟน
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="จอทีวี/โปรเจคเตอร์">
-                จอทีวี/โปรเจคเตอร์ 
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="กระดานฟลิปชาร์ท">
-               กระดานฟลิปชาร์ท
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="Smart Board">
-                Smart Board
-            </p>
-        </div>
 
-        <div class="group-inp" style="width:50%;">
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="ระบบวิดีโอคอนเฟอเรนซ์">
-                ระบบวิดีโอคอนเฟอเรนซ์
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="Wi-Fi">
-                 Wi-Fi
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="ปลั๊กไฟ และ พอร์ต USB">
-                ปลั๊กไฟ และ พอร์ต USB
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="คอมพิวเตอร์ หรือ แล็ปท็อป">
-                คอมพิวเตอร์ หรือ แล็ปท็อป
-            </p>
-            <p>
-                <input type="checkbox" name="fac[]" id="" value="อุปกรณ์พื้นฐานในห้องปฏิบัติการ">
-                อุปกรณ์พื้นฐานในห้องปฏิบัติการ
-            </p>
-        </div>
-  
-        </div> -->
 
 
     

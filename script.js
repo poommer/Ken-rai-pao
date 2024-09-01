@@ -1,20 +1,54 @@
-$(document).ready(function () {
-<<<<<<< Updated upstream
-=======
 
-  $('#status_room').change(function (e) { 
-    e.preventDefault();
-    console.log(e.target.checked);
-    if(e.target.checked === true){
-      $('#statusArea').addClass('status-room-active');
-      $('#statusArea').removeClass('status-room');
-    }else{
-       $('#statusArea').removeClass('status-room-active');
-      $('#statusArea').addClass('status-room');
+function status_show(e,id) { 
+  let check = e.checked === true ? 1 : 0
+  console.log(e.checked);
+  if(e.checked === true){
+      $('#statusArea'+id).addClass('status-room-active');
+      $('#statusArea'+id).removeClass('status-room');
+  }else{
+      $('#statusArea'+id).removeClass('status-room-active');
+      $('#statusArea'+id).addClass('status-room');
+  }
+
+  $.ajax({
+    type: "POST",
+    url: "../server/admin/room/status_toggle.php",
+    data: {
+        status: check, // สถานะใหม่ที่จะสลับ
+        id: id // ID ของห้องที่จะสลับสถานะ
+    },
+    dataType: "json",
+    success: function (response) {
+      console.log(response);
+      
+        if(response.success) {
+            alert('สถานะห้องถูกสลับสำเร็จ');
+        } else {
+            alert('เกิดข้อผิดพลาดในการสลับสถานะ');
+        }
     }
+});
+
+  
+};
+
+$(document).ready(function () {
+
+
+
+  $('#file_Image').change(function (e) { 
+    e.preventDefault();
+    file_img = e.target.files[0];
+    console.log(e.target.files);
+    
+      const reader_image = new FileReader();
+      reader_image.onload = () => {
+        $('#preview_image').attr('src', reader_image.result);
+        $('#preview_image').attr('alt', reader_image.result);
+      };
+      reader_image.readAsDataURL(file_img);
     
   });
->>>>>>> Stashed changes
   // alert('connected!')
 
       // $(function(){
