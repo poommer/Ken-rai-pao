@@ -20,10 +20,13 @@
                 <h2>MCR BOOKING</h2>
                 <p>เอ็มซีอาร์ บุ๊กกิ้ง</p>
             </div>
-            <div class="head-booking">
+            <a href="" class="btn-logout">
+                <p style="margin-top:7px">Logout</p>
+            </a>
+            <!-- <div class="head-booking">
                 <img src="../static/calendar.png" alt="" width="25px" height="25px">
                 <a href>การจองของฉัน</a href>
-            </div>
+            </div> -->
         </div>
         <div class="">
             รอภูมิทำ
