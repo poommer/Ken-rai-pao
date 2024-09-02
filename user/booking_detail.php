@@ -24,16 +24,16 @@
             <p><span>รายละเอียดห้อง:</span> การประชุมทีม การนำเสนอผลงาน</p>
         </div>
         <div class="details">
-            <p><span>ชื่อ - นามสกุลผู้จอง:</span> นางสาวลูกจันทร์ กาหลง</p>
-            <p><span>เบอร์โทร:</span> 062 666 0211</p>
-            <p><span>Email:</span> todosob@mcr.booking</p>
+            <p><span>ชื่อ - นามสกุลผู้จอง:</span> นาย ภาษยกร ปานสินธ์</p>
+            <p><span>เบอร์โทร:</span> 0999999999</p>
+            <p><span>Email:</span> 65209010009@thonburi.ac.th</p>
             <p><span>Line:</span> todosob</p>
             <p><span>แผนก/ฝ่าย:</span> การตลาด</p>
         </div>
         <div class="details">
             <p><span>หัวข้อประชุม:</span> ทดสอบระบบการจองห้องประชุม</p>
             <p><span>วันและเวลา:</span> 20/08/2567 09:00 - 16:00</p>
-            <p><span>จำนวนผู้เข้าร่วม:</span> 15 คน</p>
+            <p><span>จำนวนผู้เข้าร่วม:</span> 18 คน</p>
             <p><span>รายละเอียดการใช้งาน:</span> โปรเจกเตอร์, โทรศัพท์, Wi-Fi</p>
         </div>
         <div class="button">
