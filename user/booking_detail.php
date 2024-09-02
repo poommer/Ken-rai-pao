@@ -40,6 +40,5 @@
             <button>ยกเลิกการจอง</button>
         </div>
     </div>
-    </div>
 </body>
 </html>
