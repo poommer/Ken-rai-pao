@@ -27,8 +27,8 @@
             <p><span>ชื่อ - นามสกุลผู้จอง:</span> นาย ภาษยกร ปานสินธ์</p>
             <p><span>เบอร์โทร:</span> 0999999999</p>
             <p><span>Email:</span> 65209010009@thonburi.ac.th</p>
-            <p><span>Line:</span> todosob</p>
-            <p><span>แผนก/ฝ่าย:</span> การตลาด</p>
+            <p><span>Line:</span> jinwza007</p>
+            <p><span>แผนก/ฝ่าย:</span> IT</p>
         </div>
         <div class="details">
             <p><span>หัวข้อประชุม:</span> ทดสอบระบบการจองห้องประชุม</p>
