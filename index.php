@@ -12,7 +12,14 @@
 </head>
 <body>
     <div class="container">
-        
+        <?php
+        session_start();
+        if(isset($_SESSION['user_role'])){
+            $_SESSION['user_role'] === 'admin' ? require('admin/room.php') : require('user/homepage.php');
+        }else{
+            require('login.php');
+        }
+        ?>
     </div>
 </body>
 </html>

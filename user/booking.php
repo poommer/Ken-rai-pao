@@ -19,32 +19,54 @@
 
         <div class="booking-container">
             <h1>จองห้อง</h1>
-            <form action="">
+            <form action="../server/booking.php" method="post">
+                <?php 
+                require('../server/conn.php');
+                session_start();
+                $id = $_GET['id'];
+
+                $sql = "SELECT `room_name` FROM `room` WHERE  `room_id`= ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $id);
+
+                $result = $stmt->execute();
+
+                $result = $stmt->get_result();
+
+                $row = $result->fetch_assoc();
+
+                ?>
+
             <div class="row" style="display:flex; gap:1rem;">
                     <div class="group-inp" style="width:100%;">
                         <label for="room_name">ห้องประชุม</label>
-                        <input type="text" name="room_name" id="room_name" style="width:100%;" disabled>
+                        <input type="text" name="room_name" id="room_name" style="width:100%; background-color: #f1f1f1; color: #878689; cursor: no-drop;" value="<?php echo $row['room_name'] ?>" readonly>
+                        <input type="hidden" name="id" id="id" style="width:100%;" value="<?php echo $id ?>" readonly>
                     </div>
 
 
             </div>
+            <?php ?>
+
             <div class="row" style="display:flex; gap:1rem; margin-bottom:.5rem">
                     <div class="group-inp" style="width:50%;">
                         <label for="name">ชื่อ - นามสกุลผู้จอง</label>
-                        <input type="text" name="name" id="name" style="width:100%;" disabled>
+                        <input type="text" name="name" id="name" style="width:100%; background-color: #f1f1f1; color: #878689; cursor: no-drop;" value="<?php echo $_SESSION['user_name'] ?>" readonly>
                     </div>
                     <div class="group-inp" style="width:50%;">
                         <label for="dep">แผนก</label>
-                        <input type="text" name="dep" id="dep" style="width:100%;" disabled>
+                        <input type="text" name="dep" id="dep" style="width:100%; background-color: #f1f1f1; color: #878689;" value="<?php echo $_SESSION['user_dep'] ?>" readonly>
                     </div>
 
 
             </div>
+
             
+
             <hr style="border-style:dashed; border-color:#dedede;">
             <div class="row" style="display:flex; gap:1rem;">
                     <div class="group-inp" style="width:65%;">
-                        <label for="title">หัวข้อการประชุะม</label>
+                        <label for="title">หัวข้อการประชุม/กิจกรรม</label>
                         <input type="text" name="title" id="title" style="width:100%;">
                     </div>
                     <div class="group-inp" style="width:35%;">
@@ -73,8 +95,8 @@
 
             <div class="row" style="display:flex; gap:1rem;">
                     <div class="group-inp" style="width:100%; height:10rem;">
-                        <label for="room_name">บันทึกเพิ่มเติม</label>
-                        <textarea  name="room_name" id="room_name" style="resize: none;height:10rem;"></textarea>
+                        <label for="note">บันทึกเพิ่มเติม</label>
+                        <textarea  name="note" id="note" style="resize: none;height:10rem;"></textarea>
                     </div>
 
 

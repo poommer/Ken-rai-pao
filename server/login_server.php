@@ -18,7 +18,11 @@ if ($result->num_rows == 1) {
     $row = $result->fetch_assoc();
     $_SESSION['user_name'] = $row['u_titleName'].$row['u_Fname'].' '.$row['u_Lname'];
     $_SESSION['user_ID'] = $row['u_id'];
+    $_SESSION['user_dep'] = $row['u_dep'];
     $_SESSION['user_role'] = $row['u_role'];
+    header('location: ../index.php');
+}else{
+    
     header('location: ../index.php');
 }
 
