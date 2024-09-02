@@ -401,9 +401,6 @@ transition: width .4s ease;
 
 }
 
-.card-room img{
-    
-}
 
 .card-room{ 
     background-color: #f0f0f0;
@@ -425,6 +422,34 @@ transition: width .4s ease;
     /* background-size: 50% 100%, 50% 100%; ปรับขนาดรูปภาพให้เหมาะสม */
 }
 
+.bg-bookDetail{
+    background-image: url('static/booking_detail.png');
+    /* background-position: left top, right bottom; กำหนดตำแหน่งของแต่ละรูป */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำ */
+    background-size: cover;
+    /* background-size: 50% 100%, 50% 100%; ปรับขนาดรูปภาพให้เหมาะสม */
+}
+
+
+.box{
+    height: 37.5rem;
+    background-color: #fff;
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 30px 70px 30px 70px;
+    border:solid #CAB3FF .5px;
+    overflow: hidden;
+    overflow-y: auto;
+
+}
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 50;
+    color: #872BF0;
+    
+}
 
 
 .card-room-head>img{
